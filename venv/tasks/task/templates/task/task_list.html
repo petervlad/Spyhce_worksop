@@ -1,0 +1,15 @@
+ {% extends "base.html" %}
+
+ {% block title %}
+    Title
+ {% endblock %}
+
+ {% block content %}
+ <ul>
+     {% for task in object_list %}
+        <li>{{ task.title }} - {{ task.created_at|date }}</li>
+    {% empty %}
+        <li>No tasks yet.</li>
+    {% endfor %}
+</ul>
+ {% endblock %}net s
